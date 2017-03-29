@@ -10,4 +10,18 @@
 
 @implementation Vertex
 
+@synthesize location = location_;
+
+- (instancetype)initWithLocation:(CGPoint)location{
+    self = [super init];
+    if (self) {
+        [self setLocation:location];
+    }
+    return self;
+}
+
+- (void)addMark:(id<Mark>)mark{}
+- (void)removeMark:(id<Mark>)mark{}
+- (id<Mark>)childMarkAtIndex:(NSUInteger)index{return nil;}
+
 @end

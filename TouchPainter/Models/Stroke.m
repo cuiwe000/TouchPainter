@@ -10,4 +10,23 @@
 
 @implementation Stroke
 
+//@synthesize <#property#>
+
+- (instancetype)copyWithZone:(NSZone *)zone{
+    Stroke *strokeCopy = [[[self class] allocWithZone:zone] init];
+    return strokeCopy;
+}
+
+-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)aCoder{
+    
+}
+
 @end

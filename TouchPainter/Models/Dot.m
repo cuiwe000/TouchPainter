@@ -10,4 +10,10 @@
 
 @implementation Dot
 
+- (void)drawWithContext:(CGContextRef)context{
+    CGFloat x = self.location.x;
+    CGFloat y = self.location.y;
+    //CGRect frame = CGRectMake(x -, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
+}
+
 @end

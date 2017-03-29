@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		406035081E8A3DFC00CB0765 /* CanvasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406035071E8A3DFC00CB0765 /* CanvasViewController.m */; };
+		4060350B1E8A3E1800CB0765 /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4060350A1E8A3E1800CB0765 /* PaletteViewController.m */; };
+		4060350E1E8A3E2B00CB0765 /* ThumbnailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4060350D1E8A3E2B00CB0765 /* ThumbnailViewController.m */; };
+		406035111E8A44A200CB0765 /* CoordinatingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 406035101E8A44A200CB0765 /* CoordinatingController.m */; };
 		409A985F1E8360E100E8A4CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 409A985E1E8360E100E8A4CD /* main.m */; };
 		409A98621E8360E100E8A4CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 409A98611E8360E100E8A4CD /* AppDelegate.m */; };
 		409A98651E8360E100E8A4CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 409A98641E8360E100E8A4CD /* ViewController.m */; };
@@ -38,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		406035061E8A3DFC00CB0765 /* CanvasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasViewController.h; sourceTree = "<group>"; };
+		406035071E8A3DFC00CB0765 /* CanvasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasViewController.m; sourceTree = "<group>"; };
+		406035091E8A3E1800CB0765 /* PaletteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
+		4060350A1E8A3E1800CB0765 /* PaletteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
+		4060350C1E8A3E2B00CB0765 /* ThumbnailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbnailViewController.h; sourceTree = "<group>"; };
+		4060350D1E8A3E2B00CB0765 /* ThumbnailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbnailViewController.m; sourceTree = "<group>"; };
+		4060350F1E8A44A100CB0765 /* CoordinatingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoordinatingController.h; sourceTree = "<group>"; };
+		406035101E8A44A200CB0765 /* CoordinatingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoordinatingController.m; sourceTree = "<group>"; };
 		409A985A1E8360E100E8A4CD /* TouchPainter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchPainter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		409A985E1E8360E100E8A4CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		409A98601E8360E100E8A4CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,6 +100,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		406035051E8A3DD600CB0765 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				406035061E8A3DFC00CB0765 /* CanvasViewController.h */,
+				406035071E8A3DFC00CB0765 /* CanvasViewController.m */,
+				406035091E8A3E1800CB0765 /* PaletteViewController.h */,
+				4060350A1E8A3E1800CB0765 /* PaletteViewController.m */,
+				4060350C1E8A3E2B00CB0765 /* ThumbnailViewController.h */,
+				4060350D1E8A3E2B00CB0765 /* ThumbnailViewController.m */,
+				4060350F1E8A44A100CB0765 /* CoordinatingController.h */,
+				406035101E8A44A200CB0765 /* CoordinatingController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		409A98511E8360E000E8A4CD = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +138,7 @@
 		409A985C1E8360E100E8A4CD /* TouchPainter */ = {
 			isa = PBXGroup;
 			children = (
+				406035051E8A3DD600CB0765 /* Controllers */,
 				409A98911E83717F00E8A4CD /* Models */,
 				409A98601E8360E100E8A4CD /* AppDelegate.h */,
 				409A98611E8360E100E8A4CD /* AppDelegate.m */,
@@ -299,9 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4060350B1E8A3E1800CB0765 /* PaletteViewController.m in Sources */,
 				409A98651E8360E100E8A4CD /* ViewController.m in Sources */,
 				409A98621E8360E100E8A4CD /* AppDelegate.m in Sources */,
+				4060350E1E8A3E2B00CB0765 /* ThumbnailViewController.m in Sources */,
 				409A98981E837B2700E8A4CD /* Vertex.m in Sources */,
+				406035081E8A3DFC00CB0765 /* CanvasViewController.m in Sources */,
+				406035111E8A44A200CB0765 /* CoordinatingController.m in Sources */,
 				409A989B1E837CC600E8A4CD /* Dot.m in Sources */,
 				409A985F1E8360E100E8A4CD /* main.m in Sources */,
 				409A98951E8377CE00E8A4CD /* Stroke.m in Sources */,
