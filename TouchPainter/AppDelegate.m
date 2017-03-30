@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CoordinatingController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    
+    CoordinatingController *coordinatingController = [CoordinatingController sharedInstance];
+    
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    window.backgroundColor = [UIColor redColor];
+    [window makeKeyWindow];
+    [window makeKeyAndVisible];
+//
     return YES;
 }
 

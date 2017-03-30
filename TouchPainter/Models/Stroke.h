@@ -11,4 +11,10 @@
 
 @interface Stroke : NSObject<Mark>
 
+@property (nonatomic, strong) UIColor *color;
+@property (nonatomic, assign) CGFloat size;
+@property (nonatomic, assign) CGPoint location;
+@property (nonatomic, readonly) NSUInteger count;// 子节点个数
+@property (nonatomic, readonly) id<Mark> lastChild;
+
 @end

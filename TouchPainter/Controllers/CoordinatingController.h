@@ -6,8 +6,20 @@
 //  Copyright © 2017年 adi. All rights reserved.
 //  中介者 类似Mediator
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface CoordinatingController : UIViewController
+@class CanvasViewController,PaletteViewController,ThumbnailViewController;
+
+@interface CoordinatingController : NSObject{
+    @private
+    UIViewController *activeViewController_;
+    CanvasViewController *canvasViewController_;
+}
+
+@property (nonatomic, readonly) UIViewController *activeViewController;
+@property (nonatomic, readonly) CanvasViewController *canvasViewController;
+
++ (CoordinatingController *)sharedInstance;
 
 @end

@@ -14,24 +14,38 @@
 
 @implementation CoordinatingController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
++ (CoordinatingController *)sharedInstance{
+    static CoordinatingController *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        // 必须使用 allocWithZone 形式，如果 使用 [super alloc]，allocWithZone又被重写，会执行allocWithZone，导致后面代码不执行，具体原因 我也不知
+        instance = [[super allocWithZone:NULL] init];
+    });
+    return instance;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
++ (id) allocWithZone:(NSZone *)zone
+{
+    return [self sharedInstance];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (id) copyWithZone:(NSZone*)zone
+{
+    return self;
 }
-*/
+
+- (instancetype)init{
+    self = [super init];
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+- (void)initialize{
+    
+}
+
+#pragma mark - private method
 
 @end

@@ -8,6 +8,12 @@
 
 #import "Vertex.h"
 
-@interface Dot : Vertex
+@interface Dot : Vertex{
+    @private
+    UIColor *color_;
+    CGFloat size_;
+}
+
+
 
 @end

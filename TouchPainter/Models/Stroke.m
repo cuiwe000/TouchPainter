@@ -12,7 +12,7 @@
 
 //@synthesize <#property#>
 
-- (instancetype)copyWithZone:(NSZone *)zone{
+- (id)copyWithZone:(NSZone *)zone{
     Stroke *strokeCopy = [[[self class] allocWithZone:zone] init];
     return strokeCopy;
 }
@@ -28,5 +28,10 @@
 - (void)encodeWithCoder:(NSCoder *)aCoder{
     
 }
+
+- (void)addMark:(id<Mark>)mark{}
+- (void)removeMark:(id<Mark>)mark{}
+- (id<Mark>)childMarkAtIndex:(NSUInteger)index{return nil;}
+
 
 @end

@@ -20,8 +20,14 @@
     return self;
 }
 
+- (id)copyWithZone:(NSZone *)zone{
+    Vertex *vertex = [[[self class] allocWithZone:zone] initWithLocation:location_];
+    return vertex;
+}
+
 - (void)addMark:(id<Mark>)mark{}
 - (void)removeMark:(id<Mark>)mark{}
 - (id<Mark>)childMarkAtIndex:(NSUInteger)index{return nil;}
+
 
 @end
