@@ -18,11 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
-    
     CoordinatingController *coordinatingController = [CoordinatingController sharedInstance];
     
     UIWindow *window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     window.backgroundColor = [UIColor redColor];
+    window.rootViewController = coordinatingController.activeViewController;
     [window makeKeyWindow];
     [window makeKeyAndVisible];
 //

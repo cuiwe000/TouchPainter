@@ -7,12 +7,17 @@
 //
 
 #import "CoordinatingController.h"
+#import "CanvasViewController.h"
 
 @interface CoordinatingController ()
 
 @end
 
 @implementation CoordinatingController
+
+@synthesize activeViewController=activeViewController_;
+@synthesize canvasViewController=canvasViewController_;
+
 
 + (CoordinatingController *)sharedInstance{
     static CoordinatingController *instance = nil;
@@ -43,7 +48,8 @@
 }
 
 - (void)initialize{
-    
+    canvasViewController_ = [[CanvasViewController alloc] init];
+    activeViewController_ = canvasViewController_;
 }
 
 #pragma mark - private method
